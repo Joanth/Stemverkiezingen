@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asiel en Migratie – Stem Advies</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="header"></div>
+
+  <main class="container">
+    <section class="content">
+      <h2>Asiel en Migratie</h2>
+      <p>
+        Op deze pagina vind je het onafhankelijke stemadvies over het onderwerp asiel en migratie. We baseren ons op daadwerkelijke stemgedrag en keuzes van politieke partijen, niet op verkiezingsretoriek.
+      </p>
+
+      <article>
+        <img src="images/Politie.jpg" alt="Beeld bij asiel en migratie">
+        <p>Visualisatie van het onderwerp, met toelichting.</p>
+        <hr class="afscheiding">
+      </article>
+ 
+      <article>
+        <img src="images/Geweld.jpg" alt="Beeld bij asiel en migratie">
+        <p>Visualisatie van het onderwerp, met toelichting.</p>
+        <hr class="afscheiding">
+      </article>
+ 
+
+
+ </section>
+
+    <aside class="affiliate">
+      <h2>Advertenties</h2>
+      <a href="https://affiliate-link.nl">
+        <img src="images/banner.jpg" alt="Affiliate Banner">
+      </a>
+    </aside>
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+    fetch('header.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+
+        const toggleButton = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.menu');
+        toggleButton.addEventListener('click', () => {
+          menu.classList.toggle('show');
+        });
+
+        document.querySelectorAll('.menu a').forEach(link => {
+          link.addEventListener('click', () => {
+            menu.classList.remove('show');
+          });
+        });
+      });
+
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      });
+  </script>
+
+</body>
+</html>

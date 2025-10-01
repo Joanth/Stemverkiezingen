@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Defensie en Oorlogen – Stem Advies</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="header"></div>
+
+  <main class="container">
+    <section class="content">
+      <h2>Defensie en Oorlogen</h2>
+      <p>
+        Op deze pagina vindt u moties over de Defensie en de actuele Oorlogen.
+      </p>
+
+      <article>
+        <img src="images/DefensieOorlogen/EU-Leger.jpg" alt="">
+        <p>We hebben al een NATO waar we samenwerken maar sommige partijen willen daar nog een niet rechtstreeks gekozen vergaderlaag tussen.</p>
+        <hr class="afscheiding">
+      </article>
+ 
+      <article>
+        <img src="images/DefensieOorlogen/EU-Top-Vrede.jpg" alt="">
+        <p>Wat is er mis met het oproepen tot vrede?</p>
+        <hr class="afscheiding">
+      </article>
+ 
+      <article>
+        <img src="images/Defensieoorlogen/Defensie.jpg" alt="">
+        <p>Het is nu uiteindelijk 5% geworden. In de komende verkiezingen wordt bepaald wie en hoe dat betaald gaat worden.</p>
+        <hr class="afscheiding">
+      </article>
+ 
+
+ </section>
+
+    <aside class="affiliate">
+      <h2>Advertenties</h2>
+      <a href="https://affiliate-link.nl">
+        <img src="images/banner.jpg" alt="Affiliate Banner">
+      </a>
+    </aside>
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+    fetch('header.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+
+        const toggleButton = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.menu');
+        toggleButton.addEventListener('click', () => {
+          menu.classList.toggle('show');
+        });
+
+        document.querySelectorAll('.menu a').forEach(link => {
+          link.addEventListener('click', () => {
+            menu.classList.remove('show');
+          });
+        });
+      });
+
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      });
+  </script>
+
+</body>
+</html>

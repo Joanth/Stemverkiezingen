@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welkom bij Het enige echte Stem Advies</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="header"></div>
+
+  <main class="container">
+    <section class="content">
+      <section class="intro">
+        <h2>Welkom op deze Website.</h2>
+        <p>
+          Stem Advies negeert alle politieke spelletjes. Adviseert geen politieke keuze maar probeert u inzicht te geven voor wat voor politiek partij u eigenlijk kiest.
+		  Wordt het links, rechts, progressief of conservatief? Of toch maar een partij uit het midden. Zijn er eigenlijk nog wel partijen in het midden?
+        </p>
+      </section>
+
+      <article class="motie-analyse">
+        <h2>Geen Stem Advies dus.</h2>
+        <p><strong>Deze website is geen onpartijdige stemadviseur gebaseerd op verkiezingsprogramma’s.</strong></p>
+        <p><em>Huh? Wablief? Waarom? Hoezo?</em></p>
+        <p>Verkiezingsprogramma’s—niemand leest ze. Nou ja, misschien Frits Wester. Het zijn brijen van informatie die politieke partijen uiteindelijk toch niet waarmaken. We leven nu eenmaal in een coalitieland. Bovendien kun je alleen besluiten over de toekomst nemen op basis van het verleden.</p>
+        <p>Deze website pretendeert dan ook niet om verkiezingsprogramma’s uit te pluizen en u via gestuurde vragen naar een partij te leiden.</p>
+
+        <h3>Wat doen we dan wel?</h3>
+        <p>Wij kijken uitsluitend naar moties uit de recente geschiedenis. Waarom alleen de recente geschiedenis? Omdat de wereld voortdurend verandert. Het heeft weinig zin om moties uit andere periodes te bekijken.</p>
+        <p>De moties die wij analyseren komen uit het afgelopen politiek jaar en zijn afkomstig van de socialmediakanalen van politieke partijen. Moties die daar gedeeld worden, zijn waarschijnlijk belangrijk voor die partij.</p>
+        <p>Partijen die géén moties delen? Die vinden hun kiezers blijkbaar minder belangrijk, of hebben andere redenen om hun standpunten niet te delen.</p>
+        <p><strong>Politieke partijen die vinden dat ze door deze benadering worden benadeeld, kunnen hun relevante moties alsnog naar ons toesturen via email: stemverkiezingen@outlook.com.</strong></p>
+        <p class="quote">“Tegen deze politieke partijen zeg ik dan wel: "Neem voortaan je (potentiële) kiezer wat serieuzer."”</p>
+
+        <h3>Wat kunt u met Stemadvies?</h3>
+        <p>Op basis van dit overzicht van moties kunt u zelf concluderen welke partij uw stem verdient.</p>
+
+        <h2>Stelling 1: Het CDA speelt in deze verkiezingen een cruciale rol.</h2>
+        <ul>
+          <li>Het CDA opereert in het centrum van de macht.</li>
+          <li>Volgens de peilingen maakt het CDA een sterke zetelgroei door.</li>
+          <li>Het CDA sluit diverse partijen uit van samenwerking.</li>
+        </ul>
+        <p>Henri Bontenbal predikt fatsoen, maar komt inhoudelijk met weinig concrete standpunten. Hij wil problemen zoals asiel en migratie op een fatsoenlijke manier oplossen—maar laat in het midden hoe.</p>
+        <p>Daarom kijken wij specifiek naar het stemgedrag van de enige echte "middenpartij".</p>
+
+        <h3>Onze conclusie</h3>
+        <p>Het CDA vaart een conservatief-christelijke koers die links van het midden ligt. Bij moties over asiel en migratie stemt het CDA vaak mee met partijen als D66, GroenLinks-PvdA en ChristenUnie. Bij de moties over dit onderwerp kunt u uw eigen conclusie trekken.</p>
+
+        <h2>Onze Stelling 2: De kiezer heeft uiteindelijk de keus uit een Linkse coalitie of een Middencoalitie.</h2>
+        <ul>
+          <li>Het CDA is naar links opgeschoven. Het heeft de Boeren losgelaten.</li>
+          <li>De BBB heeft de leegte op rechts opgevuld, en is nu de Boerenpartij van Nederland.</li>		  
+          <li>De VVD is na de Strijd Rutte/Verdonk steeds meer naar links opgeschoven. Het is geen Ondernemerspartij meer.</li>
+          <li>De JA21 is in het gat op rechts gesprongen, en neemt de positie in van de oude VVD en is de Ondernemerspartij van Nederland geworden.</li>
+        </ul>
+        <p>Een middenkabinet zou nu bestaan uit de CDA, de BBB, de VVD en JA21 coalitie.</p>
+        <p>Een linkse regering zal gaan bestaan uit een GL-PVDA, D66, VVD en CDA coalitie.</p>
+
+        <h3>Onze conclusie</h3>
+        <p>De 2 meest waarschijnlijke coalities zijn de middencoalitie en de linkse coalitie. Het grote verschil in beleid tussen beide is de aanpak van Asiel en Migratie en de Hypotheekrenteaftrek.</p>
+
+      </article>
+
+      <article>
+        <img src="images/Politieke speelveld.png" alt="">
+        <p>De partijen in het politiek spectrum.</p>
+        <hr class="afscheiding">
+      </article>
+
+    <aside class="affiliate">
+    </aside>
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+    // Header laden
+    fetch('header.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+
+        const toggleButton = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.menu');
+        toggleButton.addEventListener('click', () => {
+          menu.classList.toggle('show');
+        });
+
+        document.querySelectorAll('.menu a').forEach(link => {
+          link.addEventListener('click', () => {
+            menu.classList.remove('show');
+          });
+        });
+      });
+
+    // Footer laden + teller injecteren
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+
+        // Dynamische teller toevoegen
+        const counterMap = {
+          "index.html": "jueemue4luaq312prb3hb9rza9wty3cc",
+          "onderwerp1.html": "dexcqzq57xn5m3pbnqhye5ul348bpf7n"
+          // Voeg hier je andere pagina-ID's toe
+        };
+
+        const path = window.location.pathname.split("/").pop();
+        const counterId = counterMap[path];
+
+        if (counterId) {
+          const div = document.createElement("div");
+          div.id = "sfc" + counterId;
+
+          const script = document.createElement("script");
+          script.src = `https://counter1.optistats.ovh/private/counter.js?c=${counterId}&down=async`;
+          script.type = "text/javascript";
+          script.async = true;
+
+          const container = document.getElementById("page-counter");
+          if (container) {
+            container.appendChild(div);
+            container.appendChild(script);
+          }
+        } else {
+          const container = document.getElementById("page-counter");
+          if (container) {
+            container.innerHTML = "<small style='color:#ccc;'>Geen teller beschikbaar voor deze pagina.</small>";
+          }
+        }
+      });
+  </script>
+
+</body>
+</html>
