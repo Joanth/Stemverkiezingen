@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asiel en Migratie – Stem Advies</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="header"></div>
+
+  <main class="container">
+    <section class="content">
+      <h2>Asiel en Migratie</h2>
+      <p>
+        Op deze pagina vindt u de moties over Asiel en Migratie.
+		We wijzen even op het stemgedrag van het CDA, die zegt dat ze een strenger asielbeileid willen, maar nagenoeg tegen elke Motie stemt.
+      </p>
+        <hr class="afscheiding">
+      <article>
+        <img src="images/AsielMigratie/EVRM.jpg" alt="">
+        <p>Het CDA wijst dit verzoek af en gaat dus na 29 oktober voor een Coalitie met de GL-PVDA. Anders kan ik het afwijzen van deze motie niet uitleggen. Het is een verzoek aan de regering om allianties te smeden in EU-verband en zich aan te sluiten bij de EU-landen die pleiten voor herziening van de interpretatie van het Europees Verdrag voor de Rechten van de Mens uit 1953, opdat in juridische procedures de uitkomst aansluit bij het aanpakken van de problemen van deze tijd.</p>
+        <hr class="afscheiding">
+      </article>
+      <article>
+        <img src="images/AsielMigratie/Asiel-1.jpg" alt="">
+        <p>GL-PVDA en NSC stemmen voor.</p>
+        <hr class="afscheiding">
+      </article>
+      <article>
+        <img src="images/AsielMigratie/Asiel-2.jpg" alt="">
+        <p>CDA en NSC stemmen voor.</p>
+        <hr class="afscheiding">
+      </article>
+      <article>
+        <img src="images/AsielMigratie/Asiel-3.jpg" alt="">
+        <p>CDA, D66, CU en NSC stemmen voor.</p>
+        <hr class="afscheiding">
+      </article>
+      <article>
+        <img src="images/AsielMigratie/Asiel-4.jpg" alt="">
+        <p>CDA stemt tegen.</p>
+        <hr class="afscheiding">
+      </article>
+      <article>
+        <img src="images/AsielMigratie/Asiel-5.jpg" alt="">
+        <p>CDA stemt tegen.</p>
+        <hr class="afscheiding">
+      </article>
+      <article>
+        <img src="images/AsielMigratie/Asiel-6.jpg" alt="">
+        <p>CDA stemt tegen.</p>
+        <hr class="afscheiding">
+      </article>
+      <article>
+        <img src="images/AsielMigratie/Asielstop-1.jpg" alt="">
+        <p>CDA stemt tegen.</p>
+        <hr class="afscheiding">
+      </article>
+      <article>
+        <img src="images/AsielMigratie/Asielstop-2.jpg" alt="">
+        <p>CDA stemt tegen.</p>
+        <hr class="afscheiding">
+      </article>
+      <article>
+        <img src="images/AsielMigratie/AZC-1.jpg" alt="">
+        <p>CDA stemt tegen.</p>
+        <hr class="afscheiding">
+      </article>
+      <article>
+        <img src="images/AsielMigratie/AZC-2.jpg" alt="">
+        <p>CDA stemt tegen.</p>
+        <hr class="afscheiding">
+      </article>
+      <article>
+        <img src="images/AsielMigratie/Grensbewaking.jpg" alt="">
+        <p>CDA stemt tegen.</p>
+        <hr class="afscheiding">
+      </article>
+      <article>
+        <img src="images/AsielMigratie/Spreidingswet-1.jpg" alt="">
+        <p>CDA stemt tegen.</p>
+        <hr class="afscheiding">
+      </article>
+      <article>
+        <img src="images/AsielMigratie/Spreidingswet-2.jpg" alt="">
+        <p>CDA stemt tegen.</p>
+        <hr class="afscheiding">
+      </article>
+      <article>
+        <img src="images/AsielMigratie/Spreidingswet-3.jpg" alt="">
+        <p>CDA stemt tegen.</p>
+        <hr class="afscheiding">
+      </article>
+      <article>
+        <img src="images/AsielMigratie/Spreidingswet-4.jpg" alt="">
+        <p>CDA stemt tegen.</p>
+        <hr class="afscheiding">
+      </article>
+      <article>
+        <img src="images/AsielMigratie/Syrie.jpg" alt="">
+        <p>CDA stemt tegen.</p>
+        <hr class="afscheiding">
+      </article>
+
+ </section>
+
+<aside class="affiliate">
+  <h2>Onze partners</h2>
+  <a href="https://partner.bol.com/click/click?p=1&t=url&s=1476405&url=https%3A%2F%2Fwww.bol.com%2Fnl%2Fnl%2Fl%2Fautoaccessoires%2F43647%2F&f=BAN&name=Auto&subid=asiel-migratie" target="_blank">
+    <img src="http://bannersimages.s-bol.com/Category_Mobility-affiliate_banner-300x250.png" width="300" height="250" alt="Autoaccessoires bij Bol.com" />
+  </a>
+  <img src="https://partner.bol.com/click/impression?p=1&s=1476405&t=url&f=BAN&name=Auto&subid=asiel-migratie" width="1" height="1" alt="Impressie"/>
+</aside>
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+    fetch('header.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+
+        const toggleButton = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.menu');
+        toggleButton.addEventListener('click', () => {
+          menu.classList.toggle('show');
+        });
+
+        document.querySelectorAll('.menu a').forEach(link => {
+          link.addEventListener('click', () => {
+            menu.classList.remove('show');
+          });
+        });
+      });
+
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      });
+  </script>
+
+</body>
+</html>

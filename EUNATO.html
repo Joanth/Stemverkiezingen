@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>De EU, de NATO en de Verdragen – Stem Advies</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="header"></div>
+
+  <main class="container">
+    <section class="content">
+      <h2>De EU, de NATO en de Verdragen</h2>
+      <p>
+        Op deze pagina vindt u moties over de EU, de NATO en de Verdragen.
+      </p>
+
+      <article>
+        <img src="images/EUNATOVerdragen/Defensiebonds
+		.jpg" alt="Beeld bij asiel en migratie">
+        <p>CDA stemt samen met Links tegen. Zij willen deze Defensie bonds dus wel. De rekening van de bonds gaat uiteindelijke naar Nederland omdat de Zuidelijke EU landen deze kosten niet kunnen dragen.</p>
+        <hr class="afscheiding">
+      </article>
+      <article>
+        <img src="images/EUNATOVerdragen/Importtarieven.jpg" alt="">
+        <p>Importtarieven worden uiteindelijk door de consument betaald en zorgt voor een handelsoorlog.</p>
+        <hr class="afscheiding">
+      </article>
+      <article>
+        <img src="images/EUNATOVerdragen/Internationaleverdragen.jpg" alt="">
+        <p>Deze verdragen zijn gemaakt in andere tijden. De wereld is veranderd maar deze verdragen zijn niet aangepast op de huidige tijd.</p>
+        <hr class="afscheiding">
+      </article>
+      <article>
+        <img src="images/EUNATOVerdragen/NAVO-Top.jpg" alt="">
+        <p>De NATO landen zijn onze bondgenoten. Demonstreren kan bijna altijd en overal, maar nu niet even daar.</p>
+        <hr class="afscheiding">
+      </article>
+      <article>
+        <img src="images/EUNATOVerdragen/Nederlands-Belang-1.jpg" alt="">
+        <p>Dat het CDA en de VVD hier tegen stemmen is volledig onbegrijpelijk.</p>
+        <hr class="afscheiding">
+      </article>
+      <article>
+        <img src="images/EUNATOVerdragen/Nederlands-Belang-2.jpg" alt="">
+        <p>Dat lijkt me logisch, maar dat dat niet onderkent wordt door de CDA en VVD is pure struisvogelpolitiek.</p>
+        <hr class="afscheiding">
+      </article>
+      <article>
+        <img src="images/EUNATOVerdragen/ReArm Europa.jpg" alt="">
+        <p>We hebben de NATO en werken op Defensiegebied samen met Duitsland. De EU is niet rechtstreeks en democratisch gekozen en mag dan ook geen EU leger besturen.</p>
+        <hr class="afscheiding">
+      </article>
+      <article>
+        <img src="images/EUNATOVerdragen/Schengen.jpg" alt="">
+        <p>Slechts 2 partijen willen dus baas over de eigen grenzen zijn en dat Nederland zelf kan besluiten wie zij toelaat tot Nederland.</p>
+        <hr class="afscheiding">
+      </article>
+      <article>
+        <img src="images/EUNATOVerdragen/Slavenhandel-betalingen.jpg" alt="">
+        <p>Links Nederland wil de Nederlanders laten betalen voor iets wat de grootouders van de huidige bewoners niet eens gemaakt hebben.</p>
+        <hr class="afscheiding">
+      </article>
+      <article>
+        <img src="images/EUNATOVerdragen/Vetorecht-1.jpg" alt="">
+        <p>Zonder het Veto recht kunnen we bijvoorbeeld de zeggenschap over onze pensioenpot kwijt raken.</p>
+        <hr class="afscheiding">
+      </article>
+      <article>
+        <img src="images/EUNATOVerdragen/Vetorecht-2.jpg" alt="">
+        <p>Klimaat is niet alleen een politiek omstreden doel, maar ook wetenschappelijk wordt er aan het nut getwijfeld.</p>
+        <hr class="afscheiding">
+      </article>
+      <article>
+        <img src="images/EUNATOVerdragen/Vluchtelingenverdrag.jpg" alt="">
+        <p>Oude verdragen moeten aan de tijd aangepast kunnen worden. En verouderde verdragen zouden iopgezegd moeten kunnen worden. Onder andere het CDA en de VVD vinden van niet.</p>
+        <hr class="afscheiding">
+      </article>
+ 
+
+ </section>
+
+    <aside class="affiliate">
+      <h2>Advertenties</h2>
+      <a href="https://affiliate-link.nl">
+        <img src="images/banner.jpg" alt="Affiliate Banner">
+      </a>
+    </aside>
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+    fetch('header.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+
+        const toggleButton = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.menu');
+        toggleButton.addEventListener('click', () => {
+          menu.classList.toggle('show');
+        });
+
+        document.querySelectorAll('.menu a').forEach(link => {
+          link.addEventListener('click', () => {
+            menu.classList.remove('show');
+          });
+        });
+      });
+
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      });
+  </script>
+
+</body>
+</html>

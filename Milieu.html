@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Milieu – Stem Advies</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="header"></div>
+
+  <main class="container">
+    <section class="content">
+      <h2>Milieu</h2>
+      <p>
+        Op deze pagina vindt u moties het Milieu.
+      </p>
+
+      <article>
+        <img src="images/Milieu/Klimaat-1.jpg" alt="">
+        <p>Ja21 en FVD zijn voor.</p>
+        <hr class="afscheiding">
+      </article>
+      <article>
+        <img src="images/Milieu/Klimaat-Beraad-1.jpg" alt="">
+        <p>Het beraad waar alleen Pro-Klimaat activisten voor uitgenodigd waren.</p>
+        <hr class="afscheiding">
+      </article>
+      <article>
+        <img src="images/Milieu/Klimaat-Beraad-2.jpg" alt="">
+        <p>Het beraad waar alleen Pro-Klimaat activisten voor uitgenodigd waren..</p>
+        <hr class="afscheiding">
+      </article>
+      <article>
+        <img src="images/Milieu/Milieu.jpg" alt="">
+        <p>Een andere mogelijk mer eerlijke wijze van berekenen, maar dat wil Links Nderland inclusief het CDA niet.</p>
+        <hr class="afscheiding">
+      </article>
+      <article>
+        <img src="images/Milieu/Oldtimers.jpg" alt="">
+        <p>Oldtimers is een deel van onze Cultuur.</p>
+        <hr class="afscheiding">
+      </article>
+      <article>
+        <img src="images/Milieu/Plastic.jpg" alt="">
+        <p>Minder Plastic is goed.</p>
+        <hr class="afscheiding">
+      </article>
+      <article>
+        <img src="images/Milieu/Stikstof.jpg" alt="">
+        <p>Zodat de kazernes snel gebouwd kunnen worden.</p>
+        <hr class="afscheiding">
+      </article>
+      <article>
+        <img src="images/Milieu/Wolf.jpg" alt="">
+        <p>Hoort de Wolf hier of niet? En zo Ja, in welke mate.</p>
+        <hr class="afscheiding">
+      </article>
+      <article>
+        <img src="images/Milieu/EU-CSDDD.jpg" alt="">
+        <p>Extra EU regeldruk ten behoeve van het Milieu.</p>
+        <hr class="afscheiding">
+      </article>
+
+ </section>
+
+    <aside class="affiliate">
+      <h2>Advertenties</h2>
+      <a href="https://affiliate-link.nl">
+        <img src="images/banner.jpg" alt="Affiliate Banner">
+      </a>
+    </aside>
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+    fetch('header.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+
+        const toggleButton = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.menu');
+        toggleButton.addEventListener('click', () => {
+          menu.classList.toggle('show');
+        });
+
+        document.querySelectorAll('.menu a').forEach(link => {
+          link.addEventListener('click', () => {
+            menu.classList.remove('show');
+          });
+        });
+      });
+
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      });
+  </script>
+
+</body>
+</html>

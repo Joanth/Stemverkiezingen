@@ -1,0 +1,251 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  padding-top: 140px;
+}
+
+/* Sticky header inclusief titel en menu */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #cceeff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.site-title {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.site-title h1 {
+  font-size: 2em;
+  margin: 0;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Menu binnen header */
+nav {
+  background-color: #333;
+  padding: 10px 0;
+}
+
+.menu-toggle {
+  display: none;
+  background-color: #333;
+  color: white;
+  font-size: 1.5em;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+nav ul.menu {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul.menu li {
+  margin: 5px 10px;
+}
+
+nav ul.menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 12px;
+  display: inline-block;
+}
+
+nav ul.menu li a:hover {
+  text-decoration: underline;
+}
+
+/* Layout container */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 20px auto;
+  gap: 20px;
+  padding: 0 10px;
+}
+
+/* Brede contentkolom */
+.content {
+  flex: 3;
+  min-width: 300px;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+/* Introductieblok */
+.intro {
+  background-color: #e6f7ff;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-left: 5px solid #3399cc;
+  border-radius: 5px;
+}
+
+.intro h2 {
+  margin-top: 0;
+  color: #006699;
+}
+
+.intro p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Afbeeldingen en tekstblokken */
+.content article {
+  margin-bottom: 30px;
+}
+
+.content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.content p {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #444;
+}
+
+/* Subtiele afscheiding */
+.afscheiding {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 20px 0;
+  width: 100%;
+  opacity: 0.6;
+}
+
+/* Smalle affiliate-kolom */
+.affiliate {
+  flex: 1;
+  min-width: 250px;
+  background-color: #fff8e1;
+  padding: 20px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  margin-top: 40px;
+}
+
+/* Bezoekersteller styling */
+footer div {
+  margin-top: 10px;
+}
+
+footer script {
+  display: inline-block;
+}
+
+/* Motie-analyse sectie */
+.motie-analyse {
+  background-color: #f9f9f9;
+  border-left: 5px solid #0077cc;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.05);
+}
+
+.motie-analyse h2 {
+  color: #0077cc;
+  margin-top: 1.5rem;
+  font-size: 1.6em;
+}
+
+.motie-analyse h3 {
+  color: #005999;
+  margin-top: 1.2rem;
+  font-size: 1.3em;
+}
+
+.motie-analyse p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+.motie-analyse ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.motie-analyse li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #444;
+}
+
+.motie-analyse .quote {
+  font-style: italic;
+  color: #555;
+  border-left: 3px solid #ccc;
+  padding-left: 1rem;
+  margin: 1rem 0;
+}
+
+/* 📱 Responsive tweaks */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    margin: 0 auto;
+  }
+
+  nav ul.menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 0;
+  }
+
+  nav ul.menu.show {
+    display: flex;
+  }
+
+  nav ul.menu li {
+    margin: 10px 0;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .content, .affiliate {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .site-title h1 {
+    font-size: 1.5em;
+  }
+
+  .intro p {
+    font-size: 0.95rem;
+  }
+}
